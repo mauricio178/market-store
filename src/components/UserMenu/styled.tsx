@@ -9,30 +9,40 @@ export const Container = styled.div<ContainerType>`
     background: #484848;
     transition: all 0.6;
     z-index: 200;
-    height: 100%;
+    margin-left: 60em;
+    height: 16em;
     position: fixed;
-    width: 16em;
-    left: ${props => props.visible ? '0' : '-100%'};
+    width: 12em;
+    border-radius: 8px;
+    box-shadow: 0px 3px 0px;
+    top: ${props => props.visible ? '0' : '-100%'};
     transition: all 0.8s;
 
-    header{
+    header {
         background: var(--secondary-color);
         display: flex;
+        flex-direction: row;
         justify-content: space-between;
-        height: 4em;
         align-items: center;
+        height: 4em;
 
-        img {
-            margin-left: 2em;
-            width: 100px;
-            height: 50px;
+        button {
+            background: transparent;
+            border: 0px solid transparent;
+            border-radius: 8px;
+            :hover {
+                cursor: pointer;
+                opacity: 0.7;
+                background: gray;
+                transition: 0.5s;
+            }
         }
     }
 
     body {
         
         div{
-            background: transparent;
+            margin-top: 0.25em;
             :hover{
                 filter: brightness(0.9);
                 background: #545454;
@@ -43,7 +53,7 @@ export const Container = styled.div<ContainerType>`
                 align-items: center;
                 color: var(--text-color-ligth);
                 flex-direction: row;
-                font-size: 22px;
+                font-size: 16px;
                 text-decoration:none; 
                 font-family: 'Calibri';
                 :hover {
@@ -54,23 +64,11 @@ export const Container = styled.div<ContainerType>`
                 svg {
                     color: var(--seconday-color);
                     font-size: 24px;
-                    margin: 1em;
+                    margin-right: 0.25em;
                 }
             }   
         }
 
     }
 
-    button{
-        background: transparent;
-        border: 0px solid transparent;
-        margin-top: 1em;
-        border-radius: 8px;
-        :hover {
-            opacity: 0.8;
-            background: gray;
-            cursor: pointer;
-            transition: 0.4s;
-        }
-    }
 `;

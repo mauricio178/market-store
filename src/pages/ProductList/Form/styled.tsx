@@ -9,7 +9,7 @@ export const Container = styled.div`
     justify-content: centert;
     align-items: center;
     flex-direction: column;
-    border-radius: 10px;
+    border-radius: 4px;
     padding: 1em;
     border: 1px solid transparent;
     box-shadow: 4px 4px 2px #353535;
@@ -33,6 +33,7 @@ export const ContainerTitle = styled.div`
 
     h1 {
         font-family: sans-serif;
+        font-size: 24px;
         color: var(--title-color);
     }
 

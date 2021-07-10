@@ -1,18 +1,24 @@
 import React, { useCallback } from 'react'
 import { Container } from './styled'
-import { FiMenu, FiUser, FiLogOut } from 'react-icons/fi';
+import { FiMenu, FiUser, FiLogOut, FiChevronDown } from 'react-icons/fi';
 import { useHistory } from 'react-router';
 import Swal from 'sweetalert2';
 import mrkLogo from '../../assets/mrkLogo.png'
 import { useAsideBar } from '../../hooks/asideBarHook';
 import AsideBar from '../AsideBar';
+import { useUserMenu } from '../../hooks/userMenuHook';
 
 function Header() {
 
   const { turnOnAsideBar } = useAsideBar()
+  const { turnOnUserMenu } = useUserMenu()
 
   const handleOpenSideBar = () => {
     turnOnAsideBar()
+  }
+
+  const handleOpenUserMenu = () => {
+    turnOnUserMenu()
   }
 
   const history = useHistory()
@@ -41,7 +47,10 @@ function Header() {
         <img src={mrkLogo} alt="Market" />
       </div>
       <div>
-        <FiUser size="20" /> Bem vindo(a), User
+        <button onClick={handleOpenUserMenu}>
+          <FiUser size="22"/> Bem vindo(a), User
+          <FiChevronDown size="22"/>
+        </button>
         <button type="button" onClick={handleLogout}>
           <FiLogOut size="20" />
         </button>

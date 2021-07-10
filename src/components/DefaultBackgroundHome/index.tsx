@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import AsideBar from '../AsideBar';
 import Header from '../Header';
+import UserMenu from '../UserMenu';
 import { Container } from './styled'
 
 
@@ -14,6 +15,7 @@ export default function DefaultBackgroundHome({ children }: DefaultBackgroundHom
     <Container>
       <Header />
       <AsideBar/>
+      <UserMenu/>
       {children}
     </Container>
   );

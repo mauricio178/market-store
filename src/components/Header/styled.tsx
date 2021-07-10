@@ -28,8 +28,8 @@ export const Container = styled.div`
     color: #000000;
     background-color: transparent;
       :hover {
-      opacity: .3;
-      transition: opacity .3s;
+      opacity: 0.8;
+      transition: .3s;
       cursor: pointer;
       }
   }

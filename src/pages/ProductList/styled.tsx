@@ -4,7 +4,7 @@ import styled from "styled-components";
 export const Container = styled.div`
     display: flex;
     flex-direction: column;
-    border-radius: 8px;
+    border-radius: 4px;
     width: 90vw;
     background: var(--secondary-color);
     height: 480px;
@@ -37,6 +37,7 @@ export const ContainerTitle = styled.div`
     h1 {
         font-family: sans-serif;
         color: var(--title-color);
+        font-size: 24px;
     }
 
     button {

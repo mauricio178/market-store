@@ -20,7 +20,7 @@ export default function NewProduct() {
         <DefaultBackgroundHome>
             <ContainerTitle>
                 <div>
-                    <h1>Produtos /</h1><h2>Novo Produto</h2>
+                    <h1>Produtos /</h1><h1>/ Novo Produto</h1>
                 </div>
                 <button onClick={handleGoToProducts}><FiCornerDownLeft size="20" />Voltar</button>
             </ContainerTitle>

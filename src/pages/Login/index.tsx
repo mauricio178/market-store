@@ -24,7 +24,7 @@ export default function Login() {
       if (email === null) turnOnAlert('Email Null', 3000)
 
     } catch (err) {
-      handleGoToProducts()
+      
     }
 
   }
@@ -47,7 +47,7 @@ export default function Login() {
         </form>
         <label>ou entre com...</label>
         <DivIcons>
-          <button>
+          <button onClick={handleGoToProducts}>
             <FiFacebook size="24" />
           </button>
           <button>
