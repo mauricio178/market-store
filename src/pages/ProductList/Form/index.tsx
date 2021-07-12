@@ -27,10 +27,13 @@ export default function NewProduct() {
             <Container>
                 <form>
                     <Input placeholder="Nome do Produto" type="text" name="name" />
-                    <Input placeholder="Valor" type="text" name="valor" />
-                    <Input placeholder="Cód. Produto" type="text" name="cod" />
+                    <Input placeholder="Valor Unitário" type="text" name="valor" />
+                    <div>
+                        <input type="number" placeholder="Qt." />
+                        <Input placeholder="Cód. Produto" type="text" name="cod" />
+                    </div>
                     <TextArea placeholder="Descrição" type="text" name="fornecedor" />
-                    <ButtonPrimary label="Enviar" type="submit"/>
+                    <ButtonPrimary label="Enviar" type="submit" />
                 </form>
 
             </Container>

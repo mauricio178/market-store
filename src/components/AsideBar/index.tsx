@@ -1,5 +1,5 @@
 import React, { Children, useState } from 'react'
-import { FiBox, FiChevronLeft, FiHeart, FiShoppingCart } from 'react-icons/fi';
+import { FiBox, FiChevronLeft, FiHeart, FiPieChart } from 'react-icons/fi';
 import { useAsideBar } from '../../hooks/asideBarHook';
 import { Container } from './styled';
 import mrkLogo from '../../assets/mrkLogo.png'
@@ -31,9 +31,9 @@ export default function AsideBar() {
                     label="Produtos"
                 />
                 <AsideItem
-                    icon={<FiShoppingCart/>}
+                    icon={<FiPieChart/>}
                     path="/productList"
-                    label="Meu Carrinho"
+                    label="Relatórios"
                 />
                 <AsideItem
                     icon={<FiHeart/>}

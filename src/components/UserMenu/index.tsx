@@ -1,9 +1,6 @@
 import React, { Children, useState } from 'react'
-import { FiChevronUp, FiHeart, FiShoppingCart, FiSliders, FiTruck, FiUser } from 'react-icons/fi';
-import { useAsideBar } from '../../hooks/asideBarHook';
+import { FiChevronUp, FiHeart, FiSliders, FiUser } from 'react-icons/fi';
 import { Container } from './styled';
-import mrkLogo from '../../assets/mrkLogo.png'
-import AsideItem from '../AsideItem';
 import { useUserMenu } from '../../hooks/userMenuHook';
 import UserMenuItem from '../UserMenuItem';
 
