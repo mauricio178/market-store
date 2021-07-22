@@ -13,7 +13,7 @@ margin-top: 1em;
     border: 1px solid var(--title-color);
     border-radius: 8px;
     background: transparent;
-    color: var(--background);
+    color: var(--title-color);
     box-shadow: 4px 4px 2px #353535;
     &:hover{
       cursor: pointer;
@@ -46,6 +46,7 @@ export const Container = styled.div`
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
+
       
       button {
         background: transparent;

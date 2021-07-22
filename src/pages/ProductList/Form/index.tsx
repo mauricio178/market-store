@@ -6,9 +6,21 @@ import { Container, ContainerTitle } from './styled';
 import Input from '../../../components/Input';
 import ButtonPrimary from '../../../components/ButtonPrimary';
 import TextArea from '../../../components/TextArea';
+import { api } from '../../../services/api'
 
 
 export default function NewProduct() {
+
+    async function handleSubmit(){
+        try {
+            await api.post("/store")
+            .then(res => {
+                console.log(res)
+            })
+        } catch (error) {
+            console.log('erro na rota')
+        }
+    }
 
     const history = useHistory()
 
@@ -25,7 +37,7 @@ export default function NewProduct() {
                 <button onClick={handleGoToProducts}><FiCornerDownLeft size="20" />Voltar</button>
             </ContainerTitle>
             <Container>
-                <form>
+                <form onSubmit={handleSubmit}>
                     <Input placeholder="Nome do Produto" type="text" name="name" />
                     <Input placeholder="Valor Unitário" type="text" name="valor" />
                     <div>

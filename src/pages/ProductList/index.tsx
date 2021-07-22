@@ -4,10 +4,21 @@ import { Container, ContainerTitle, DivTitle } from './styled';
 import { FiPlus } from "react-icons/fi";
 import { useHistory } from 'react-router-dom';
 import CardProduct from '../../components/CardProduct';
-
+import { api } from '../../services/api'
 
 
 export default function ProductList() {
+
+    // async function fetchProduct(){
+    //  try {
+    //      api.get('/login').then(
+    //          console.log("rota Login OK")
+    //      )
+         
+    //  } catch (error) {
+    //      console.log("Erro na rota")
+    //  }
+    // }
 
     const history = useHistory()
 

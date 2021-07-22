@@ -2,44 +2,31 @@ import React, { useState } from 'react'
 import { Container, DivIcons } from './styled'
 import Input from '../../components/Input/index'
 import { useHistory } from 'react-router-dom';
+import * as Yup from 'yup'
 import ButtonPrimary from '../../components/ButtonPrimary'
 import DefaultBackground from '../../components/DefaultBackgroundLogin';
 import Alert from '../../components/Alert';
 import { useAlert } from '../../hooks/alertHook';
 import mrkLogo from '../../assets/mrkLogo.png'
-import PasswordInput from '../../components/PasswordInput';
 import { api } from '../../services/api';
+import PasswordInput from '../../components/PasswordInput';
 
-export default function Login() {
-
-  const { turnOnAlert } = useAlert()
+export default function Register(data: any) {
 
   const history = useHistory()
 
   async function handleSubmit(data: any) {
-    data.preventDefault()
 
     try {
-
-      api.get('/login', data)
-      console.log("Entrou")
-      
-      // let email = document.getElementById("email");
-      
-      // if (email === null) turnOnAlert('Email Null', 3000)
-      
+      api.post("/login", data)
+      handleGoToLogin()
     } catch (err) {
-      console.log("Erro")
-
+      console.log(err.message)
     }
-
-  }
-  const handleGoToProducts = () => {
-    history.push('/productList')
   }
 
-  const handleGoToRegister = () => {
-    history.push('/register')
+  const handleGoToLogin = () => {
+    history.push('/')
   }
 
   return (
@@ -49,18 +36,24 @@ export default function Login() {
 
       <Container>
         <img src={mrkLogo} alt="Market" />
-        <h1>Login</h1>
+        <h1>Registro</h1>
         <form onSubmit={handleSubmit}>
           <Input placeholder="E-mail" type="email" name="email" />
-          <PasswordInput 
-            placeholder="Senha"
+          <Input placeholder="Nome" type="text" name="name" />
+          <PasswordInput
+            placeholder="Crie sua Senha"
             type="password"
             name="password"
           />
-          <ButtonPrimary label="Entrar" type="submit" />
+          <PasswordInput
+            placeholder="Confirme a Senha"
+            type="password"
+            name="password"
+          />
+          <ButtonPrimary label="Registrar" type="submit" />
         </form>
         <DivIcons>
-          <button onClick={handleGoToRegister}>Registrar-se</button>
+          <button onClick={handleGoToLogin}>Voltar ao Login</button>
         </DivIcons>
       </Container>
     </DefaultBackground >
