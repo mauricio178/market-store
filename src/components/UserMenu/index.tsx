@@ -31,7 +31,7 @@ export default function UserMenu() {
                 />
                 <UserMenuItem
                     icon={<FiUser />}
-                    path="/productList"
+                    path="/profile-user"
                     label="Meu Perfil"
                 />
                 <UserMenuItem

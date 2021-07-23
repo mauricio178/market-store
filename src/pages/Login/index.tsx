@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { Container, DivIcons } from './styled'
 import Input from '../../components/Input/index'
 import { useHistory } from 'react-router-dom';
@@ -9,29 +9,28 @@ import { useAlert } from '../../hooks/alertHook';
 import mrkLogo from '../../assets/mrkLogo.png'
 import PasswordInput from '../../components/PasswordInput';
 import { api } from '../../services/api';
+import AuthContext, { useAuth } from '../../contexts/auth';
 
 export default function Login() {
 
   const { turnOnAlert } = useAlert()
 
   const history = useHistory()
-
+  
   async function handleSubmit(data: any) {
     data.preventDefault()
+    
+    api.post('/')
+    .then((response) => {
+      console.log(response.data)
+      context.Login()
+      })
+      .catch((error) => {
+        console.log(error)
+      })  
 
-    try {
-
-      api.get('/login', data)
-      console.log("Entrou")
-      
-      // let email = document.getElementById("email");
-      
+      // let email = document.getElementById("email");  
       // if (email === null) turnOnAlert('Email Null', 3000)
-      
-    } catch (err) {
-      console.log("Erro")
-
-    }
 
   }
   const handleGoToProducts = () => {
@@ -40,13 +39,14 @@ export default function Login() {
 
   const handleGoToRegister = () => {
     history.push('/register')
+
   }
+
+  const context = useAuth()
 
   return (
     <DefaultBackground>
-
       <Alert />
-
       <Container>
         <img src={mrkLogo} alt="Market" />
         <h1>Login</h1>

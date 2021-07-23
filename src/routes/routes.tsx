@@ -1,14 +1,15 @@
 import React from 'react'
 import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { AlertProvider } from '../hooks/alertHook';
+import { AsideBarProvider } from '../hooks/asideBarHook';
+import { UserMenuProvider } from '../hooks/userMenuHook';
 import ProductList from '../pages/ProductList'
 import Login from '../pages/Login';
 import NewProduct from '../pages/ProductList/Form';
 import Register from '../pages/Registro';
-import { AlertProvider } from '../hooks/alertHook';
-import { AsideBarProvider } from '../hooks/asideBarHook';
-import { UserMenuProvider } from '../hooks/userMenuHook';
+import ProfileUser from '../pages/ProfileUser';
 
-function Routes() {
+export function Routes() {
     return (
         <AlertProvider>
             <AsideBarProvider>
@@ -19,6 +20,7 @@ function Routes() {
                             <Route path="/productList" exact component={ProductList} />
                             <Route path="/new-product" exact component={NewProduct} />
                             <Route path="/register" exact component={Register} />
+                            <Route path="/profile-user" exact component={ProfileUser} />
                         </Switch>
                     </BrowserRouter>
                 </UserMenuProvider>
@@ -26,5 +28,3 @@ function Routes() {
         </AlertProvider>
     );
 }
-
-export { Routes }

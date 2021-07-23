@@ -18,7 +18,6 @@ export const Container = styled.div`
     font-size: 20px;
     color: var(--text-color);
     &:focus {
-    box-shadow: 2px 2px 1px #545454;
     border: 1px solid transparent;
     outline: 0;
     transition: .8s;

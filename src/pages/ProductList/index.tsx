@@ -9,17 +9,6 @@ import { api } from '../../services/api'
 
 export default function ProductList() {
 
-    // async function fetchProduct(){
-    //  try {
-    //      api.get('/login').then(
-    //          console.log("rota Login OK")
-    //      )
-         
-    //  } catch (error) {
-    //      console.log("Erro na rota")
-    //  }
-    // }
-
     const history = useHistory()
 
     const handleGoToNewProduct = () => {
