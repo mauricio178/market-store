@@ -1,15 +1,18 @@
 export {}
 
 // import React from 'react';
-// import { BrowserRouter, Route } from 'react-router-dom';
+// import { BrowserRouter, Route, Switch } from 'react-router-dom';
 // import Login from '../pages/Login';
+// import ProductList from '../pages/ProductList';
 
 // const HomeRoutes: React.FC = () => {
-//  return (
-//    <BrowserRouter>
-//      <Route path="/" component={Login} />
-//    </BrowserRouter>
-//  );
+//     return (
+//         <BrowserRouter>
+//             <Switch>
+//                 <Route path="/productList" component={ProductList} />
+//             </Switch>
+//         </BrowserRouter>
+//     );
 // };
 
 // export default HomeRoutes;

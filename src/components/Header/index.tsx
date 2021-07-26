@@ -7,8 +7,11 @@ import mrkLogo from '../../assets/mrkLogo.png'
 import { useAsideBar } from '../../hooks/asideBarHook';
 import AsideBar from '../AsideBar';
 import { useUserMenu } from '../../hooks/userMenuHook';
+import ButtonSecondary from '../ButtonSecondary';
 
 function Header() {
+
+  const name = localStorage.getItem('@market/name')
 
   const { turnOnAsideBar } = useAsideBar()
   const { turnOnUserMenu } = useUserMenu()
@@ -32,6 +35,8 @@ function Header() {
       cancelButtonText: 'Cancelar'
     }).then((result) => {
       if (result.isConfirmed) {
+        localStorage.removeItem('@market/email');
+        localStorage.removeItem('@market/name');
         history.push('/')
       }
     })
@@ -48,7 +53,7 @@ function Header() {
       </div>
       <div>
         <button onClick={handleOpenUserMenu}>
-          <FiUser size="22"/> Bem vindo(a), User
+          <FiUser size="22"/> Bem vindo(a), {name}
           <FiChevronDown size="22"/>
         </button>
         <button type="button" onClick={handleLogout}>

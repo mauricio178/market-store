@@ -5,44 +5,13 @@ export const Container = styled.div`
     width: 90vw;
     display: flex;
     background: var(--secondary-color);
-    justify-content: centert;
+    justify-content: center;
     align-items: center;
     flex-direction: column;
     border-radius: 4px;
     padding: 1em;
     border: 1px solid transparent;
     box-shadow: 4px 4px 2px #353535;
-
-    form {
-        div{
-            display: flex;
-            flex-direction: row;
-                input {
-                    border: 0px solid ;
-                    border-radius: 0.25rem;
-                    width: 100%;
-                    height: 2rem;
-                    padding: 1rem;
-                    margin-bottom: 1em;
-                    background: var(--text-color-ligth);
-                    border: 1px solid transparent;
-                    margin-right: 4px;
-                    box-shadow: 4px 4px 2px #353535;
-                    font-family: sans-serif;
-                    font-size: 20px;
-                    color: var(--text-color);
-                    :hover{
-                        cursor: pointer;
-                    }
-                    :focus {
-                    box-shadow: 2px 2px 1px #545454;
-                    border: 1px solid transparent;
-                    outline: 0;
-                    transition: .8s;
-                    }  
-                }
-        }
-    }
 `;
 
 export const ContainerTitle = styled.div`
@@ -63,7 +32,7 @@ export const ContainerTitle = styled.div`
     h1 {
         font-family: sans-serif;
         font-size: 24px;
-        color: var(--title-color);
+        color: var(--text-color-ligth);
     }
 
     button {

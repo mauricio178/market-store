@@ -1,32 +1,28 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
-  font-weight: 400;
   padding: 1rem 1;
-  display: flex;
-  justify-content: start;
-  align-items: flex-start;
-
+  border-radius: 4px;
+  width: 100%;
+  height: 8rem;
+  padding: 0.75rem;
+  margin-bottom: 1em;
+  border: 1px solid transparent;
+  background: var(--primary-color);
   
   input {
-    border: 0px solid ;
-    border-radius: 0.25rem;
-    width: 100%;
-    height: 6rem;
-    padding: 1rem;
-    margin-bottom: 1em;
-    background: #c7cec6;
     border: 1px solid transparent;
-    box-shadow: 4px 4px 2px #353535;
     font-family: sans-serif;
-    font-size: 20px;
+    font-size: 16px;
+    margin-left: 8px;
+    font-weight: 600;
     color: var(--text-color);
-      &:focus {
-      box-shadow: 2px 2px 1px #545454;
-      border: 1px solid transparent;
-      outline: 0;
-      transition: .8s;
-    }  
-    
+    background: transparent;
+    flex: 1;
+    &:focus {
+    border: 1px solid transparent;
+    outline: 0;
+    transition: .8s;
   }
+}
 `;

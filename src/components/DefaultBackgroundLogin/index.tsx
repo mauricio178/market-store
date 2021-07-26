@@ -1,6 +1,5 @@
-import React, { useRef, } from 'react'
-import ButtonPrimary from '../ButtonPrimary';
-import { Container, ContainerForm } from './styled'
+import React from 'react'
+import { Container} from './styled'
 
 interface AuthDefaultBackgroundInterface{
   children: React.ReactNode;
@@ -10,7 +9,6 @@ export default function DefaultBackground({ children }: AuthDefaultBackgroundInt
   return (
     <Container className="App"> 
           {children}
-
     </Container>
   );
 }

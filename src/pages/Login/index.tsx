@@ -9,40 +9,44 @@ import { useAlert } from '../../hooks/alertHook';
 import mrkLogo from '../../assets/mrkLogo.png'
 import PasswordInput from '../../components/PasswordInput';
 import { api } from '../../services/api';
-import AuthContext, { useAuth } from '../../contexts/auth';
+import { FiLock, FiMail } from 'react-icons/fi';
 
-export default function Login() {
+
+
+export default function Login(props: any) {
 
   const { turnOnAlert } = useAlert()
 
   const history = useHistory()
-  
+
   async function handleSubmit(data: any) {
-    data.preventDefault()
     
-    api.post('/')
-    .then((response) => {
-      console.log(response.data)
-      context.Login()
-      })
-      .catch((error) => {
-        console.log(error)
-      })  
-
-      // let email = document.getElementById("email");  
-      // if (email === null) turnOnAlert('Email Null', 3000)
-
+    // # Armazenando LocalStorage #
+    data.preventDefault()
+    const email = data.target.elements.email.value
+    localStorage.setItem('@market/email', email)
+    handleGoToProducts()
+    
+  //   api.post('/')
+  //   .then((response) => {
+  //     console.log(response.data)
+  //   })
+  //   .catch((error) => {
+  //     console.log(error)
+  //   })  
+    
+  //   let email = document.getElementById("email");  
+  //   if (email === null) turnOnAlert('Email Null', 3000)
   }
+
   const handleGoToProducts = () => {
     history.push('/productList')
   }
 
   const handleGoToRegister = () => {
     history.push('/register')
-
   }
 
-  const context = useAuth()
 
   return (
     <DefaultBackground>
@@ -51,8 +55,13 @@ export default function Login() {
         <img src={mrkLogo} alt="Market" />
         <h1>Login</h1>
         <form onSubmit={handleSubmit}>
-          <Input placeholder="E-mail" type="email" name="email" />
-          <PasswordInput 
+          <Input 
+            icon={FiMail}
+            placeholder="E-mail" 
+            type="email" 
+            name="email" />
+          <PasswordInput
+            icon={FiLock} 
             placeholder="Senha"
             type="password"
             name="password"

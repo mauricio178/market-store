@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react'
 import { useHistory } from 'react-router-dom';
-import { FiCornerDownLeft } from "react-icons/fi";
+import { FiCornerDownLeft, FiDollarSign, FiKey, FiPackage } from "react-icons/fi";
 import DefaultBackgroundHome from '../../../components/DefaultBackgroundHome';
 import { Container, ContainerTitle } from './styled';
 import Input from '../../../components/Input';
@@ -38,12 +38,9 @@ export default function NewProduct() {
             </ContainerTitle>
             <Container>
                 <form onSubmit={handleSubmit}>
-                    <Input placeholder="Nome do Produto" type="text" name="name" />
-                    <Input placeholder="Valor Unitário" type="text" name="valor" />
-                    <div>
-                        <input type="number" placeholder="Qt." />
-                        <Input placeholder="Cód. Produto" type="text" name="cod" />
-                    </div>
+                    <Input icon={FiKey} placeholder="Cód. Produto" type="text" name="cod" />
+                    <Input icon={FiPackage} placeholder="Nome do Produto" type="text" name="name" />
+                    <Input icon={FiDollarSign} placeholder="Valor Unitário" type="text" name="valor" />
                     <TextArea placeholder="Descrição" type="text" name="fornecedor" />
                     <ButtonPrimary label="Enviar" type="submit" />
                 </form>

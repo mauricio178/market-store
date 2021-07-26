@@ -8,6 +8,9 @@ import { FiEdit } from 'react-icons/fi'
 
 function ProfileUser() {
 
+    const email = localStorage.getItem('@market/email')
+    const name = localStorage.getItem('@market/name')
+
     function handleOpenEditForm() {
         alert('form')
     }
@@ -20,8 +23,8 @@ function ProfileUser() {
                 </Header>
                 <Body>
                     <div>
-                        <h4>name: </h4>
-                        <h4>email: </h4>
+                        <h4>Nome: </h4><p>{name}</p>
+                        <h4>E-mail: </h4><p>{email}</p>
                         {/* <h4>Name: {user.map(user => (
                        <label key={user.id}>
                            {user.name}

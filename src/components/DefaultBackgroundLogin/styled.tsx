@@ -9,7 +9,3 @@ position: relative;
 justify-content: center;
 align-items: center;
 `;
-
-export const ContainerForm = styled.div`
-
-`;

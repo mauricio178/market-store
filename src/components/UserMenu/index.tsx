@@ -7,6 +7,8 @@ import UserMenuItem from '../UserMenuItem';
 
 export default function UserMenu() {
 
+    const user = localStorage.getItem('@market/name')
+
     const { turnOffUserMenu } = useUserMenu()
 
     const handleCloseUserMenu = () => {
@@ -21,7 +23,7 @@ export default function UserMenu() {
                 <button type='button' onClick={handleCloseUserMenu}>
                     <FiChevronUp size="22" />
                 </button>
-                    <h4>Olá, User</h4>
+                    <h4>Olá, {user}</h4>
             </header>
             <body>
                 <UserMenuItem

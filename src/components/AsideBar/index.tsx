@@ -1,4 +1,4 @@
-import React, { Children, useState } from 'react'
+import React from 'react'
 import { FiBox, FiChevronLeft, FiHeart, FiPieChart } from 'react-icons/fi';
 import { useAsideBar } from '../../hooks/asideBarHook';
 import { Container } from './styled';

@@ -36,7 +36,7 @@ export const ContainerTitle = styled.div`
 
     h1 {
         font-family: sans-serif;
-        color: var(--title-color);
+        color: var(--text-color-ligth);
         font-size: 24px;
     }
 

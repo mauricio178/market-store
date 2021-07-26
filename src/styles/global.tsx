@@ -3,14 +3,15 @@ import { createGlobalStyle } from "styled-components";
 
 export default createGlobalStyle`
     :root {
-        --background: #3A6EA5;
-        --background-ligth: #FF6700;
-        --secondary-color: #C0C0C0;
-        --primary-color: #9d9d9d;
+        --background: #2c2c2c;
+        --background-ligth: #445b99;
+        --secondary-color: #9e9e9e;
+        --primary-color: #dcdcdc;
         --title-color: #222823;
         --text-color: #08090A;
         --text-color-ligth: #c9c9c9;
-        --alert-color: #a22222;
+        --alert-color: #9d2d2d;
+        --font-family: 'Calibri'
     }
     * {
         margin: 0;

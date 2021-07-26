@@ -13,11 +13,9 @@ flex-direction: column;
 
 `;
 
-
 export const Header = styled.div`
 display: flex;
 box-shadow: 0px 3px 0px #353535;
-border: 1px solid;
 height: 10%;
 
 `;
@@ -28,11 +26,9 @@ display: flex;
 background: transparent;
 height: 80%;
 flex-direction: column;
-border: 1px solid;
 `;
 
 export const DivButton = styled.div`
-border: 1px solid;
 margin: 0.5em;
 display: flex;
 height: 10%;

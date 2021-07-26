@@ -2,16 +2,19 @@ export {}
 
 // import React, { useContext } from 'react';
 // import AuthContext from '../contexts/auth';
+// import { useAuth } from '../hooks/AuthContext';
 
 // import AuthRoutes from './AuthRoutes';
 // import HomeRoutes from './HomeRoutes';
 
-// const Routes: React.FC = () => {
-    
-//     const { signed } = useContext(AuthContext);
+// function Routes(){
+//     const { data } = useAuth()
 
-//     return signed ? <HomeRoutes /> : <AuthRoutes />;
+//     if(!!data.token){
+//         return <HomeRoutes />
+//     }
 
-// };
+//     return <AuthRoutes />
+// }
 
-// export default Routes;
+// export default Routes
